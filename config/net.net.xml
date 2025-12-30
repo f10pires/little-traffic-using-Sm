@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-12-30T16:43:53.781612-03:00 by Eclipse SUMO netedit 1.25.0
+<neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\felip\OneDrive\Documentos\IC\IC-2\Configuration\little-traffic-using-Sm\config\net.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\felip\OneDrive\Documentos\IC\IC-2\Configuration\little-traffic-using-Sm\config\net.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</neteditConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" avoidOverlap="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,-80.00,150.00,50.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id="arquimedes" from="2" to="3" priority="-1">
+        <lane id="arquimedes_0" index="0" speed="13.89" length="50.00" shape="54.00,-91.20 100.00,-91.20"/>
+        <lane id="arquimedes_1" index="1" speed="13.89" length="50.00" shape="54.00,-88.00 100.00,-88.00"/>
+        <lane id="arquimedes_2" index="2" speed="13.89" length="50.00" shape="54.00,-84.80 100.00,-84.80"/>
+        <lane id="arquimedes_3" index="3" allow="bus" speed="13.89" length="50.00" shape="54.00,-81.60 100.00,-81.60"/>
+    </edge>
+    <edge id="einstein" from="J1" to="4" priority="-1">
+        <lane id="einstein_0" index="0" allow="bus" speed="13.89" length="48.86" shape="98.40,46.80 98.40,4.00"/>
+    </edge>
+    <edge id="eron" from="3" to="4" priority="-1">
+        <lane id="eron_0" index="0" speed="13.89" length="80.00" shape="111.20,-80.00 111.20,-16.80"/>
+        <lane id="eron_1" index="1" speed="13.89" length="80.00" shape="108.00,-80.00 108.00,-16.80"/>
+        <lane id="eron_2" index="2" speed="13.89" length="80.00" shape="104.80,-80.00 104.80,-16.80"/>
+        <lane id="eron_3" index="3" allow="bus" speed="13.89" length="80.00" shape="101.60,-80.00 101.60,-16.80"/>
+    </edge>
+    <edge id="euler" from="6" to="J1" priority="-1">
+        <lane id="euler_0" index="0" allow="bus" speed="13.89" length="48.15" shape="53.20,48.40 96.80,48.40"/>
+    </edge>
+    <edge id="faraday" from="1" to="4" priority="-1">
+        <lane id="faraday_0" index="0" speed="13.89" length="50.00" shape="57.20,-4.80 92.80,-4.80"/>
+        <lane id="faraday_1" index="1" speed="13.89" length="50.00" shape="57.20,-1.60 92.80,-1.60"/>
+    </edge>
+    <edge id="kirchoff" from="1" to="6" priority="-1">
+        <lane id="kirchoff_0" index="0" allow="bus" speed="13.89" length="49.29" shape="51.60,4.00 51.60,46.80"/>
+    </edge>
+    <edge id="maxwell" from="0" to="1" priority="-1">
+        <lane id="maxwell_0" index="0" speed="13.89" length="50.00" shape="0.00,-8.00 36.40,-8.00"/>
+        <lane id="maxwell_1" index="1" speed="13.89" length="50.00" shape="0.00,-4.80 36.40,-4.80"/>
+        <lane id="maxwell_2" index="2" allow="bus" speed="13.89" length="50.00" shape="0.00,-1.60 36.40,-1.60"/>
+    </edge>
+    <edge id="newton" from="4" to="5" priority="-1">
+        <lane id="newton_0" index="0" speed="13.89" length="50.00" shape="116.80,-11.20 150.00,-11.20"/>
+        <lane id="newton_1" index="1" speed="13.89" length="50.00" shape="116.80,-8.00 150.00,-8.00"/>
+        <lane id="newton_2" index="2" speed="13.89" length="50.00" shape="116.80,-4.80 150.00,-4.80"/>
+        <lane id="newton_3" index="3" allow="bus" speed="13.89" length="50.00" shape="116.80,-1.60 150.00,-1.60"/>
+    </edge>
+    <edge id="pitagoras" from="1" to="2" priority="-1">
+        <lane id="pitagoras_0" index="0" speed="13.89" length="80.00" shape="42.00,-13.60 42.00,-76.00"/>
+        <lane id="pitagoras_1" index="1" speed="13.89" length="80.00" shape="45.20,-13.60 45.20,-76.00"/>
+        <lane id="pitagoras_2" index="2" allow="bus" speed="13.89" length="80.00" shape="48.40,-13.60 48.40,-76.00"/>
+    </edge>
+
+    <junction id="0" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-9.60"/>
+    <junction id="1" type="priority" x="50.00" y="0.00" incLanes="maxwell_0 maxwell_1 maxwell_2" intLanes="" shape="50.00,4.00 53.20,4.00 53.64,1.78 54.20,1.00 54.98,0.44 55.98,0.11 57.20,0.00 57.20,-6.40 55.00,-6.60 53.20,-7.20 51.80,-8.20 50.80,-9.60 50.20,-11.40 50.00,-13.60 40.40,-13.60 39.96,-11.38 39.40,-10.60 38.62,-10.04 37.62,-9.71 36.40,-9.60 36.40,0.00 40.56,0.11 43.96,0.44 46.60,1.00 48.49,1.78 49.62,2.78">
+        <request index="0" response="0000" foes="0010"/>
+        <request index="1" response="0001" foes="0001"/>
+        <request index="2" response="0000" foes="0000"/>
+        <request index="3" response="0000" foes="0000"/>
+    </junction>
+    <junction id="2" type="priority" x="50.00" y="-80.00" incLanes="pitagoras_0 pitagoras_1 pitagoras_2" intLanes="" shape="40.40,-76.00 50.00,-76.00 50.44,-78.22 51.00,-79.00 51.78,-79.56 52.78,-79.89 54.00,-80.00 54.00,-92.80 49.84,-92.33 46.44,-90.93 43.80,-88.60 41.91,-85.33 40.78,-81.13">
+        <request index="0" response="0000" foes="0000"/>
+        <request index="1" response="0000" foes="0000"/>
+        <request index="2" response="0000" foes="0000"/>
+        <request index="3" response="0000" foes="0000"/>
+    </junction>
+    <junction id="3" type="priority" x="100.00" y="-80.00" incLanes="arquimedes_0 arquimedes_1 arquimedes_2 arquimedes_3" intLanes="" shape="100.00,-80.00 112.80,-80.00 112.44,-83.91 111.38,-87.11 109.60,-89.60 107.11,-91.38 103.91,-92.44 100.00,-92.80">
+        <request index="0" response="0000" foes="0000"/>
+        <request index="1" response="0000" foes="0000"/>
+        <request index="2" response="0000" foes="0000"/>
+        <request index="3" response="0000" foes="0000"/>
+    </junction>
+    <junction id="4" type="priority" x="100.00" y="0.00" incLanes="einstein_0 eron_0 eron_1 eron_2 eron_3 faraday_0 faraday_1" intLanes="" shape="96.80,4.00 100.00,4.00 101.87,1.78 104.20,1.00 107.47,0.44 111.67,0.11 116.80,0.00 116.80,-12.80 114.58,-13.24 113.80,-13.80 113.24,-14.58 112.91,-15.58 112.80,-16.80 100.00,-16.80 99.80,-13.62 99.20,-11.02 98.20,-9.00 96.80,-7.56 95.00,-6.69 92.80,-6.40 92.80,0.00 95.02,0.44 95.80,1.00 96.36,1.78 96.69,2.78">
+        <request index="0" response="000010000" foes="100010000"/>
+        <request index="1" response="000000000" foes="111100001"/>
+        <request index="2" response="000000000" foes="111100001"/>
+        <request index="3" response="000000000" foes="111100001"/>
+        <request index="4" response="000000000" foes="111100001"/>
+        <request index="5" response="000011111" foes="000011111"/>
+        <request index="6" response="000011111" foes="000011111"/>
+        <request index="7" response="000011111" foes="000011111"/>
+        <request index="8" response="000010001" foes="000010001"/>
+    </junction>
+    <junction id="5" type="dead_end" x="150.00" y="0.00" incLanes="newton_0 newton_1 newton_2 newton_3" intLanes="" shape="150.00,-12.80 150.00,0.00"/>
+    <junction id="6" type="priority" x="50.00" y="50.00" incLanes="kirchoff_0" intLanes="" shape="53.20,50.00 53.20,46.80 50.00,46.80 50.36,48.58 50.80,49.20 51.42,49.64 52.22,49.91">
+        <request index="0" response="0" foes="0"/>
+    </junction>
+    <junction id="J1" type="priority" x="100.00" y="50.00" incLanes="euler_0" intLanes="" shape="100.00,46.80 96.80,46.80 96.80,50.00 98.58,49.64 99.20,49.20 99.64,48.58 99.91,47.78">
+        <request index="0" response="0" foes="0"/>
+    </junction>
+
+    <connection from="arquimedes" to="eron" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from="arquimedes" to="eron" fromLane="1" toLane="1" dir="l" state="M"/>
+    <connection from="arquimedes" to="eron" fromLane="2" toLane="2" dir="l" state="M"/>
+    <connection from="arquimedes" to="eron" fromLane="3" toLane="3" dir="l" state="M"/>
+    <connection from="einstein" to="newton" fromLane="0" toLane="3" dir="l" state="m"/>
+    <connection from="eron" to="newton" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="eron" to="newton" fromLane="1" toLane="1" dir="r" state="M"/>
+    <connection from="eron" to="newton" fromLane="2" toLane="2" dir="r" state="M"/>
+    <connection from="eron" to="newton" fromLane="3" toLane="3" dir="r" state="M"/>
+    <connection from="euler" to="einstein" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="faraday" to="newton" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from="faraday" to="newton" fromLane="0" toLane="1" dir="s" state="m"/>
+    <connection from="faraday" to="newton" fromLane="1" toLane="2" dir="s" state="m"/>
+    <connection from="faraday" to="newton" fromLane="1" toLane="3" dir="s" state="m"/>
+    <connection from="kirchoff" to="euler" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="maxwell" to="faraday" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="maxwell" to="pitagoras" fromLane="1" toLane="1" dir="r" state="m"/>
+    <connection from="maxwell" to="faraday" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from="maxwell" to="kirchoff" fromLane="2" toLane="0" dir="l" state="M"/>
+    <connection from="pitagoras" to="arquimedes" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from="pitagoras" to="arquimedes" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from="pitagoras" to="arquimedes" fromLane="1" toLane="2" dir="l" state="M"/>
+    <connection from="pitagoras" to="arquimedes" fromLane="2" toLane="3" dir="l" state="M"/>
+
+</net>

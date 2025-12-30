@@ -1,0 +1,28 @@
+<additional>
+    <busStop id="checkpoint1"
+             lane="pitagoras_2"
+             startPos="20"
+             endPos="40"
+             color="255,145,4">
+        <param key="emptyColor" value="1,1,1,0"/>
+    </busStop>
+	
+    <busStop id="checkpoint2"
+             lane="arquimedes_3"
+             startPos="20"
+             endPos="40"
+             color="255,145,4">
+        <param key="emptyColor" value="1,1,1,0"/>
+    </busStop>
+
+    <busStop id="checkpoint3"
+             lane="euler_0"
+             startPos="20"
+             endPos="30"
+             color="255,145,4">
+        <param key="emptyColor" value="1,1,1,0"/>
+    </busStop>
+
+<parkingArea id="ParkAreaA" lane="arquimedes_0" startPos="15" endPos="45" roadsideCapacity="5" angle="0" length="20"/>
+
+</additional>

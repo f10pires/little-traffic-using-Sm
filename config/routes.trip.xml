@@ -1,0 +1,70 @@
+<routes>
+
+    <vType id="type1" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="70"/>
+    <vType id="bus" length="15" maxSpeed="30" accel="1.2" decel="2.5" sigma="0.1" speedDev="0.1" vClass="bus"/>
+    
+     <vehicle id="veh1" type="type1" depart="0">
+	<route edges="maxwell faraday newton"/>
+    </vehicle>
+
+    <vehicle id="bus1" type="bus" depart="1" color="0,0,1">
+        <route edges="maxwell kirchoff euler einstein newton"/>
+    </vehicle>
+
+    <vehicle id="veh2" type="type1" depart="2">
+	<route edges="maxwell faraday newton"/>
+    </vehicle>
+
+    <vehicle id="bus2" type="bus" depart="3" color="0,0,1">
+        <route edges="maxwell kirchoff euler einstein newton"/>
+    </vehicle>
+
+    <vehicle id="veh3" type="type1" depart="4">
+	<route edges="maxwell faraday newton"/>
+    </vehicle>
+
+    <vehicle id="bus3" type="bus" depart="5" color="1,0,0">
+        <route edges="maxwell kirchoff euler einstein newton"/>
+        <stop busStop="checkpoint3" duration="20"/>
+    </vehicle>
+
+    <vehicle id="veh4" type="type1" depart="6">
+	<route edges="maxwell faraday newton"/>
+    </vehicle>
+    
+    <vehicle id="ved1" type="type1" depart="6" color="1,1,1">
+	<route edges="maxwell pitagoras arquimedes eron newton"/>
+    <stop parkingArea="ParkAreaA" duration="20"/>
+    </vehicle>
+    
+    <vehicle id="ved2" type="type1" depart="7">
+	<route edges="maxwell pitagoras arquimedes eron newton"/>
+    </vehicle>
+
+    <vehicle id="veh5" type="type1" depart="8">
+	<route edges="maxwell faraday newton"/>
+    </vehicle>
+
+    <vehicle id="veh6" type="type1" depart="10">
+	<route edges="maxwell faraday newton"/>
+    </vehicle>
+
+    <vehicle id="ved3" type="type1" depart="10" color="1,1,1">
+	<route edges="maxwell pitagoras arquimedes eron newton"/>
+    <stop parkingArea="ParkAreaA" duration="20"/>
+    </vehicle>
+
+    <vehicle id="bus4" type="bus" depart="11" color="1,0,0">
+        <route edges="maxwell pitagoras arquimedes eron newton"/>
+        <stop busStop="checkpoint1" duration="20"/>
+    </vehicle>
+
+    <vehicle id="bus5" type="bus" depart="13" color="1,0,0">
+        <route edges="maxwell pitagoras arquimedes eron newton"/>
+        <stop busStop="checkpoint2" duration="10"/>
+    </vehicle>
+
+
+</routes>
+
+
