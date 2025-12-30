@@ -1,11 +1,16 @@
 import traci
 from sumolib import checkBinary
+import json
 
 RED = [255, 0, 0]
 EDGE_ID = 'closed'
 VEHICLES = ['1', '4', '8']
 
 sumoBinary = checkBinary('sumo-gui')
+
+# Load config at config\config.json
+with open(r'config/config.json', 'r') as config_file:
+    config = json.load(config_file)
 
 
 def main():
@@ -23,11 +28,11 @@ def startSim():
     traci.start(
         [
             sumoBinary,
-            '--net-file', r'C:\Users\felip\OneDrive\Documentos\IC\IC-2\Configuration\little-traffic-using-Sm\config\net.net.xml',
-            '--route-files', r'C:\Users\felip\OneDrive\Documentos\IC\IC-2\Configuration\little-traffic-using-Sm\config\routes.trip.xml',
-            '--additional-files', r'C:\Users\felip\OneDrive\Documentos\IC\IC-2\Configuration\little-traffic-using-Sm\config\additional.add.xml',
-            '--gui-settings-file', r'C:\Users\felip\OneDrive\Documentos\IC\IC-2\Configuration\little-traffic-using-Sm\config\viewssettings.xml',
-            '--delay','200',
+            '--net-file', config["net-file"],
+            '--route-files', config["route-files"],
+            '--additional-files', config["additional-files"],
+            '--gui-settings-file', config["gui-settings-file"],
+            '--delay', config["delay"],
             '--start'
         ]
     )
