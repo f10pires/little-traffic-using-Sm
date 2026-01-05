@@ -1,4 +1,33 @@
 <additional>
+
+    <!-- ================== TYPES OF VEHICLES ================== -->
+
+    <!-- Car -->
+    <vType
+        id="evehicle"
+        vClass="evehicle"
+        accel="2.6"
+        decel="4.5"
+        length="5.0"
+        minGap="2.5"
+        maxSpeed="33.33"
+        guiShape="evehicle"
+    />
+
+    <!-- Bus -->
+    <vType
+        id="bus"
+        vClass="bus"
+        accel="1.2"
+        decel="4.0"
+        length="12.0"
+        minGap="3.0"
+        maxSpeed="25.0"
+        guiShape="bus"
+    />
+
+    <!-- ================== BUS STOP ================== -->
+
     <busStop id="checkpoint1"
              lane="pitagoras_2"
              startPos="20"
@@ -6,7 +35,7 @@
              color="255,145,4">
         <param key="emptyColor" value="1,1,1,0"/>
     </busStop>
-	
+
     <busStop id="checkpoint2"
              lane="arquimedes_3"
              startPos="20"
@@ -23,6 +52,16 @@
         <param key="emptyColor" value="1,1,1,0"/>
     </busStop>
 
-<parkingArea id="ParkAreaA" lane="arquimedes_0" startPos="15" endPos="45" roadsideCapacity="5" angle="0" length="20"/>
+    <!-- ================== PARKING ================== -->
+
+    <parkingArea
+        id="ParkAreaA"
+        lane="arquimedes_0"
+        startPos="15"
+        endPos="45"
+        roadsideCapacity="5"
+        angle="0"
+        length="20"
+    />
 
 </additional>
