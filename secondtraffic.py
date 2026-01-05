@@ -74,7 +74,7 @@ def addRandomVehicle(veh_id):
             else:
                 traci.vehicle.setColor(
                     veh_id,
-                    (random.randint(50,255), random.randint(50,255), random.randint(50,255))
+                    color
                 )
 
             return                                                                               # success                                                                             
