@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-12-30T16:43:53.781612-03:00 by Eclipse SUMO netedit 1.25.0
+<!-- generated on 2026-01-05T18:05:13.704257-03:00 by Eclipse SUMO netedit 1.25.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -36,110 +36,377 @@
 
 <net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" avoidOverlap="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
 
-    <location netOffset="0.00,0.00" convBoundary="0.00,-80.00,150.00,50.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+    <location netOffset="0.00,0.00" convBoundary="-50.00,-120.00,200.00,75.00" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
 
+    <edge id="-einstein" from="4" to="J1" priority="-1">
+        <lane id="-einstein_0" index="0" allow="bus" speed="13.89" length="50.00" shape="101.60,4.00 101.60,46.80"/>
+    </edge>
+    <edge id="-euler" from="J1" to="6" priority="-1">
+        <lane id="-euler_0" index="0" allow="bus" speed="13.89" length="50.00" shape="96.80,51.60 53.20,51.60"/>
+    </edge>
+    <edge id="-joules_one" from="J3" to="0" priority="-1">
+        <lane id="-joules_one_0" index="0" speed="13.89" length="75.00" shape="-4.80,68.60 -4.80,10.40"/>
+        <lane id="-joules_one_1" index="1" speed="13.89" length="75.00" shape="-1.60,68.60 -1.60,10.40"/>
+    </edge>
+    <edge id="-joules_three" from="5" to="J4" priority="-1">
+        <lane id="-joules_three_0" index="0" speed="13.89" length="75.00" shape="154.80,10.40 154.80,68.60"/>
+        <lane id="-joules_three_1" index="1" speed="13.89" length="75.00" shape="151.60,10.40 151.60,68.60"/>
+    </edge>
+    <edge id="-joules_two" from="J4" to="J3" priority="-1">
+        <lane id="-joules_two_0" index="0" speed="13.89" length="150.00" shape="143.60,79.80 6.40,79.80"/>
+        <lane id="-joules_two_1" index="1" speed="13.89" length="150.00" shape="143.60,76.60 6.40,76.60"/>
+    </edge>
+    <edge id="-kirchoff" from="6" to="1" priority="-1">
+        <lane id="-kirchoff_0" index="0" allow="bus" speed="13.89" length="50.00" shape="48.40,46.80 48.40,4.00"/>
+    </edge>
+    <edge id="-ohm" from="J2" to="3" priority="-1">
+        <lane id="-ohm_0" index="0" speed="13.89" length="64.03" shape="153.00,-116.25 115.88,-86.55"/>
+        <lane id="-ohm_1" index="1" allow="bus" speed="13.89" length="64.03" shape="151.00,-118.75 113.88,-89.05"/>
+    </edge>
+    <edge id="-pi" from="0" to="J5" priority="-1">
+        <lane id="-pi_0" index="0" speed="13.89" length="50.00" shape="-10.40,4.80 -50.00,4.80"/>
+        <lane id="-pi_1" index="1" allow="bus" speed="13.89" length="50.00" shape="-10.40,1.60 -50.00,1.60"/>
+    </edge>
+    <edge id="-square" from="J6" to="5" priority="-1">
+        <lane id="-square_0" index="0" speed="13.89" length="50.00" shape="200.00,4.80 160.40,4.80"/>
+        <lane id="-square_1" index="1" allow="bus" speed="13.89" length="50.00" shape="200.00,1.60 160.40,1.60"/>
+    </edge>
+    <edge id="-watt" from="2" to="Watt" priority="-1">
+        <lane id="-watt_0" index="0" speed="13.89" length="64.03" shape="34.12,-86.55 -3.00,-116.25"/>
+        <lane id="-watt_1" index="1" allow="bus" speed="13.89" length="64.03" shape="36.12,-89.05 -1.00,-118.75"/>
+    </edge>
     <edge id="arquimedes" from="2" to="3" priority="-1">
-        <lane id="arquimedes_0" index="0" speed="13.89" length="50.00" shape="54.00,-91.20 100.00,-91.20"/>
-        <lane id="arquimedes_1" index="1" speed="13.89" length="50.00" shape="54.00,-88.00 100.00,-88.00"/>
-        <lane id="arquimedes_2" index="2" speed="13.89" length="50.00" shape="54.00,-84.80 100.00,-84.80"/>
-        <lane id="arquimedes_3" index="3" allow="bus" speed="13.89" length="50.00" shape="54.00,-81.60 100.00,-81.60"/>
+        <lane id="arquimedes_0" index="0" speed="13.89" length="50.00" shape="54.00,-91.20 96.00,-91.20"/>
+        <lane id="arquimedes_1" index="1" speed="13.89" length="50.00" shape="54.00,-88.00 96.00,-88.00"/>
+        <lane id="arquimedes_2" index="2" speed="13.89" length="50.00" shape="54.00,-84.80 96.00,-84.80"/>
+        <lane id="arquimedes_3" index="3" allow="bus" speed="13.89" length="50.00" shape="54.00,-81.60 96.00,-81.60"/>
+    </edge>
+    <edge id="aveneue" from="2" to="J0" priority="-1">
+        <lane id="aveneue_0" index="0" allow="bus" speed="13.89" length="48.58" shape="35.76,-75.20 6.40,-75.20"/>
+        <lane id="aveneue_1" index="1" speed="13.89" length="48.58" shape="35.76,-78.40 6.40,-78.40"/>
+    </edge>
+    <edge id="aveneueb" from="J7" to="3" priority="-1">
+        <lane id="aveneueb_0" index="0" allow="bus" speed="13.89" length="47.75" shape="143.60,-75.20 116.80,-75.20"/>
+        <lane id="aveneueb_1" index="1" speed="13.89" length="47.75" shape="143.60,-78.40 116.80,-78.40"/>
+    </edge>
+    <edge id="brigadeiro" from="J0" to="0" priority="-1">
+        <lane id="brigadeiro_0" index="0" allow="bus" speed="13.89" length="77.72" shape="4.80,-73.60 4.80,-13.60"/>
+        <lane id="brigadeiro_1" index="1" speed="13.89" length="77.72" shape="1.60,-73.60 1.60,-13.60"/>
+    </edge>
+    <edge id="brigadeiroB" from="5" to="J7" priority="-1">
+        <lane id="brigadeiroB_0" index="0" allow="bus" speed="13.89" length="78.51" shape="145.20,-16.80 145.20,-73.60"/>
+        <lane id="brigadeiroB_1" index="1" speed="13.89" length="78.51" shape="148.40,-16.80 148.40,-73.60"/>
     </edge>
     <edge id="einstein" from="J1" to="4" priority="-1">
-        <lane id="einstein_0" index="0" allow="bus" speed="13.89" length="48.86" shape="98.40,46.80 98.40,4.00"/>
+        <lane id="einstein_0" index="0" allow="bus" speed="13.89" length="50.00" shape="98.40,46.80 98.40,4.00"/>
     </edge>
     <edge id="eron" from="3" to="4" priority="-1">
-        <lane id="eron_0" index="0" speed="13.89" length="80.00" shape="111.20,-80.00 111.20,-16.80"/>
-        <lane id="eron_1" index="1" speed="13.89" length="80.00" shape="108.00,-80.00 108.00,-16.80"/>
-        <lane id="eron_2" index="2" speed="13.89" length="80.00" shape="104.80,-80.00 104.80,-16.80"/>
-        <lane id="eron_3" index="3" allow="bus" speed="13.89" length="80.00" shape="101.60,-80.00 101.60,-16.80"/>
+        <lane id="eron_0" index="0" speed="13.89" length="80.00" shape="111.20,-69.60 111.20,-16.80"/>
+        <lane id="eron_1" index="1" speed="13.89" length="80.00" shape="108.00,-69.60 108.00,-16.80"/>
+        <lane id="eron_2" index="2" speed="13.89" length="80.00" shape="104.80,-69.60 104.80,-16.80"/>
+        <lane id="eron_3" index="3" allow="bus" speed="13.89" length="80.00" shape="101.60,-69.60 101.60,-16.80"/>
     </edge>
     <edge id="euler" from="6" to="J1" priority="-1">
-        <lane id="euler_0" index="0" allow="bus" speed="13.89" length="48.15" shape="53.20,48.40 96.80,48.40"/>
+        <lane id="euler_0" index="0" allow="bus" speed="13.89" length="50.00" shape="53.20,48.40 96.80,48.40"/>
     </edge>
     <edge id="faraday" from="1" to="4" priority="-1">
         <lane id="faraday_0" index="0" speed="13.89" length="50.00" shape="57.20,-4.80 92.80,-4.80"/>
         <lane id="faraday_1" index="1" speed="13.89" length="50.00" shape="57.20,-1.60 92.80,-1.60"/>
     </edge>
+    <edge id="joules_one" from="0" to="J3" priority="-1">
+        <lane id="joules_one_0" index="0" speed="13.89" length="75.00" shape="4.80,10.40 4.80,68.60"/>
+        <lane id="joules_one_1" index="1" speed="13.89" length="75.00" shape="1.60,10.40 1.60,68.60"/>
+    </edge>
+    <edge id="joules_three" from="J4" to="5" priority="-1">
+        <lane id="joules_three_0" index="0" speed="13.89" length="75.00" shape="145.20,68.60 145.20,10.40"/>
+        <lane id="joules_three_1" index="1" speed="13.89" length="75.00" shape="148.40,68.60 148.40,10.40"/>
+    </edge>
+    <edge id="joules_two" from="J3" to="J4" priority="-1">
+        <lane id="joules_two_0" index="0" speed="13.89" length="150.00" shape="6.40,70.20 143.60,70.20"/>
+        <lane id="joules_two_1" index="1" speed="13.89" length="150.00" shape="6.40,73.40 143.60,73.40"/>
+    </edge>
     <edge id="kirchoff" from="1" to="6" priority="-1">
-        <lane id="kirchoff_0" index="0" allow="bus" speed="13.89" length="49.29" shape="51.60,4.00 51.60,46.80"/>
+        <lane id="kirchoff_0" index="0" allow="bus" speed="13.89" length="50.00" shape="51.60,4.00 51.60,46.80"/>
     </edge>
     <edge id="maxwell" from="0" to="1" priority="-1">
-        <lane id="maxwell_0" index="0" speed="13.89" length="50.00" shape="0.00,-8.00 36.40,-8.00"/>
-        <lane id="maxwell_1" index="1" speed="13.89" length="50.00" shape="0.00,-4.80 36.40,-4.80"/>
-        <lane id="maxwell_2" index="2" allow="bus" speed="13.89" length="50.00" shape="0.00,-1.60 36.40,-1.60"/>
+        <lane id="maxwell_0" index="0" speed="13.89" length="50.00" shape="10.40,-8.00 36.40,-8.00"/>
+        <lane id="maxwell_1" index="1" speed="13.89" length="50.00" shape="10.40,-4.80 36.40,-4.80"/>
+        <lane id="maxwell_2" index="2" allow="bus" speed="13.89" length="50.00" shape="10.40,-1.60 36.40,-1.60"/>
     </edge>
     <edge id="newton" from="4" to="5" priority="-1">
-        <lane id="newton_0" index="0" speed="13.89" length="50.00" shape="116.80,-11.20 150.00,-11.20"/>
-        <lane id="newton_1" index="1" speed="13.89" length="50.00" shape="116.80,-8.00 150.00,-8.00"/>
-        <lane id="newton_2" index="2" speed="13.89" length="50.00" shape="116.80,-4.80 150.00,-4.80"/>
-        <lane id="newton_3" index="3" allow="bus" speed="13.89" length="50.00" shape="116.80,-1.60 150.00,-1.60"/>
+        <lane id="newton_0" index="0" speed="13.89" length="50.00" shape="116.80,-11.20 139.60,-11.20"/>
+        <lane id="newton_1" index="1" speed="13.89" length="50.00" shape="116.80,-8.00 139.60,-8.00"/>
+        <lane id="newton_2" index="2" speed="13.89" length="50.00" shape="116.80,-4.80 139.60,-4.80"/>
+        <lane id="newton_3" index="3" allow="bus" speed="13.89" length="50.00" shape="116.80,-1.60 139.60,-1.60"/>
+    </edge>
+    <edge id="ohm" from="3" to="J2" priority="-1">
+        <lane id="ohm_0" index="0" speed="13.89" length="64.03" shape="109.88,-94.05 147.00,-123.75"/>
+        <lane id="ohm_1" index="1" allow="bus" speed="13.89" length="64.03" shape="111.88,-91.55 149.00,-121.25"/>
+    </edge>
+    <edge id="pi" from="J5" to="0" priority="-1">
+        <lane id="pi_0" index="0" speed="13.89" length="50.00" shape="-50.00,-4.80 -10.40,-4.80"/>
+        <lane id="pi_1" index="1" allow="bus" speed="13.89" length="50.00" shape="-50.00,-1.60 -10.40,-1.60"/>
     </edge>
     <edge id="pitagoras" from="1" to="2" priority="-1">
-        <lane id="pitagoras_0" index="0" speed="13.89" length="80.00" shape="42.00,-13.60 42.00,-76.00"/>
-        <lane id="pitagoras_1" index="1" speed="13.89" length="80.00" shape="45.20,-13.60 45.20,-76.00"/>
-        <lane id="pitagoras_2" index="2" allow="bus" speed="13.89" length="80.00" shape="48.40,-13.60 48.40,-76.00"/>
+        <lane id="pitagoras_0" index="0" speed="13.89" length="80.00" shape="42.00,-13.60 42.00,-69.60"/>
+        <lane id="pitagoras_1" index="1" speed="13.89" length="80.00" shape="45.20,-13.60 45.20,-69.60"/>
+        <lane id="pitagoras_2" index="2" allow="bus" speed="13.89" length="80.00" shape="48.40,-13.60 48.40,-69.60"/>
+    </edge>
+    <edge id="square" from="5" to="J6" priority="-1">
+        <lane id="square_0" index="0" speed="13.89" length="50.00" shape="160.40,-4.80 200.00,-4.80"/>
+        <lane id="square_1" index="1" allow="bus" speed="13.89" length="50.00" shape="160.40,-1.60 200.00,-1.60"/>
+    </edge>
+    <edge id="watt" from="Watt" to="2" priority="-1">
+        <lane id="watt_0" index="0" speed="13.89" length="64.03" shape="3.00,-123.75 40.12,-94.05"/>
+        <lane id="watt_1" index="1" allow="bus" speed="13.89" length="64.03" shape="1.00,-121.25 38.12,-91.55"/>
     </edge>
 
-    <junction id="0" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-9.60"/>
-    <junction id="1" type="priority" x="50.00" y="0.00" incLanes="maxwell_0 maxwell_1 maxwell_2" intLanes="" shape="50.00,4.00 53.20,4.00 53.64,1.78 54.20,1.00 54.98,0.44 55.98,0.11 57.20,0.00 57.20,-6.40 55.00,-6.60 53.20,-7.20 51.80,-8.20 50.80,-9.60 50.20,-11.40 50.00,-13.60 40.40,-13.60 39.96,-11.38 39.40,-10.60 38.62,-10.04 37.62,-9.71 36.40,-9.60 36.40,0.00 40.56,0.11 43.96,0.44 46.60,1.00 48.49,1.78 49.62,2.78">
-        <request index="0" response="0000" foes="0010"/>
-        <request index="1" response="0001" foes="0001"/>
-        <request index="2" response="0000" foes="0000"/>
-        <request index="3" response="0000" foes="0000"/>
+    <junction id="0" type="priority" x="0.00" y="0.00" incLanes="-joules_one_0 -joules_one_1 brigadeiro_0 brigadeiro_1 pi_0 pi_1" intLanes="" shape="-6.40,10.40 6.40,10.40 6.51,7.22 6.84,4.62 7.40,2.60 8.18,1.16 9.18,0.29 10.40,0.00 10.40,-9.60 8.18,-10.04 7.40,-10.60 6.84,-11.38 6.51,-12.38 6.40,-13.60 0.00,-13.60 -0.29,-11.40 -1.16,-9.60 -2.60,-8.20 -4.62,-7.20 -7.22,-6.60 -10.40,-6.40 -10.40,6.40 -8.18,6.84 -7.40,7.40 -6.84,8.18 -6.51,9.18">
+        <request index="0"  response="000000000000000" foes="000001001000000"/>
+        <request index="1"  response="000000000000000" foes="000001001000000"/>
+        <request index="2"  response="000000110111000" foes="111110110111000"/>
+        <request index="3"  response="000000000000000" foes="010110000000100"/>
+        <request index="4"  response="000000000000000" foes="010110010000100"/>
+        <request index="5"  response="000000000000000" foes="111110010000100"/>
+        <request index="6"  response="000001100000011" foes="111111110000011"/>
+        <request index="7"  response="000000001110000" foes="010110001110100"/>
+        <request index="8"  response="000000000000000" foes="111110001000100"/>
+        <request index="9"  response="000000000000011" foes="111110001000011"/>
+        <request index="10" response="000001111111100" foes="000001111111100"/>
+        <request index="11" response="010001101111100" foes="010001101111100"/>
+        <request index="12" response="010001101100100" foes="010001101100100"/>
+        <request index="13" response="000001111111100" foes="001101111111100"/>
+        <request index="14" response="000001101100100" foes="000001101100100"/>
     </junction>
-    <junction id="2" type="priority" x="50.00" y="-80.00" incLanes="pitagoras_0 pitagoras_1 pitagoras_2" intLanes="" shape="40.40,-76.00 50.00,-76.00 50.44,-78.22 51.00,-79.00 51.78,-79.56 52.78,-79.89 54.00,-80.00 54.00,-92.80 49.84,-92.33 46.44,-90.93 43.80,-88.60 41.91,-85.33 40.78,-81.13">
+    <junction id="1" type="priority" x="50.00" y="0.00" incLanes="-kirchoff_0 maxwell_0 maxwell_1 maxwell_2" intLanes="" shape="46.80,4.00 53.20,4.00 53.64,1.78 54.20,1.00 54.98,0.44 55.98,0.11 57.20,0.00 57.20,-6.40 55.00,-6.60 53.20,-7.20 51.80,-8.20 50.80,-9.60 50.20,-11.40 50.00,-13.60 40.40,-13.60 39.96,-11.38 39.40,-10.60 38.62,-10.04 37.62,-9.71 36.40,-9.60 36.40,0.00 39.58,0.11 42.18,0.44 44.20,1.00 45.64,1.78 46.51,2.78">
+        <request index="0"  response="11111110000" foes="11111110000"/>
+        <request index="1"  response="11111110000" foes="11111110000"/>
+        <request index="2"  response="11111100000" foes="11111100000"/>
+        <request index="3"  response="11011000000" foes="11011000000"/>
+        <request index="4"  response="00000000000" foes="00000000111"/>
+        <request index="5"  response="00000000000" foes="00100000111"/>
+        <request index="6"  response="01000000000" foes="01100001111"/>
+        <request index="7"  response="01000000000" foes="01100001111"/>
+        <request index="8"  response="00011100000" foes="00011100111"/>
+        <request index="9"  response="00000000000" foes="00011001111"/>
+        <request index="10" response="00000000000" foes="00000001111"/>
+    </junction>
+    <junction id="2" type="priority" x="50.00" y="-80.00" incLanes="pitagoras_0 pitagoras_1 pitagoras_2 watt_0 watt_1" intLanes="" shape="40.40,-69.60 50.00,-69.60 50.11,-72.78 50.44,-75.38 51.00,-77.40 51.78,-78.84 52.78,-79.71 54.00,-80.00 54.00,-92.80 51.12,-92.70 48.88,-92.54 47.02,-92.51 45.28,-92.83 43.40,-93.69 41.12,-95.30 33.13,-85.30 35.04,-83.68 36.36,-82.36 37.10,-81.33 37.24,-80.59 36.79,-80.15 35.76,-80.00 35.76,-73.60 38.34,-73.16 39.24,-72.60 39.88,-71.82 40.27,-70.82">
+        <request index="0"  response="0000000000000000" foes="0100010000100000"/>
+        <request index="1"  response="0000000000000000" foes="1100110000100000"/>
+        <request index="2"  response="0000000000000000" foes="0011001101100000"/>
+        <request index="3"  response="0000000000000000" foes="0011001101100000"/>
+        <request index="4"  response="0000000000000000" foes="0011001101100000"/>
+        <request index="5"  response="0000000000011111" foes="0100000000011111"/>
+        <request index="6"  response="0000000000011100" foes="1100110000011100"/>
+        <request index="7"  response="0000000000000000" foes="0011001000000000"/>
+        <request index="8"  response="0000000010011100" foes="0000000010011100"/>
+        <request index="9"  response="0011000010011100" foes="0011000010011100"/>
+        <request index="10" response="0111000001100011" foes="0111000001100011"/>
+        <request index="11" response="0000000001000010" foes="0000000001000010"/>
+        <request index="12" response="0000000010011100" foes="0000011010011100"/>
+        <request index="13" response="0000000010011100" foes="0000011010011100"/>
+        <request index="14" response="0000000001100011" foes="0000010001100011"/>
+        <request index="15" response="0000000001000000" foes="0000000001000000"/>
+    </junction>
+    <junction id="3" type="priority" x="100.00" y="-80.00" incLanes="aveneueb_0 aveneueb_1 -ohm_0 -ohm_1 arquimedes_0 arquimedes_1 arquimedes_2 arquimedes_3" intLanes="" shape="100.00,-69.60 112.80,-69.60 113.24,-71.82 113.80,-72.60 114.58,-73.16 115.58,-73.49 116.80,-73.60 116.80,-80.00 113.89,-80.59 113.54,-81.33 113.92,-82.36 115.03,-83.68 116.87,-85.30 108.88,-95.30 106.60,-93.69 104.72,-92.83 102.98,-92.51 101.12,-92.54 98.88,-92.70 96.00,-92.80 96.00,-80.00 98.22,-78.84 99.00,-77.40 99.56,-75.38 99.89,-72.78">
+        <request index="0"  response="0000000000000000" foes="1011001110000000"/>
+        <request index="1"  response="0000000000000000" foes="1011001110110000"/>
+        <request index="2"  response="0100100001000000" foes="0100111111110000"/>
+        <request index="3"  response="0100000001000000" foes="0100011111110000"/>
+        <request index="4"  response="0000000000001110" foes="1011001110001110"/>
+        <request index="5"  response="0000000000001110" foes="1011001110001110"/>
+        <request index="6"  response="0100100000000000" foes="0100111110001100"/>
+        <request index="7"  response="1011000001111111" foes="1011000001111111"/>
+        <request index="8"  response="1011000001001111" foes="1011001001001111"/>
+        <request index="9"  response="1011000101111111" foes="1011000101111111"/>
+        <request index="10" response="0100000000001100" foes="0100000000001100"/>
+        <request index="11" response="0000000000000000" foes="0000010001001100"/>
+        <request index="12" response="0100000000110011" foes="0100001110110011"/>
+        <request index="13" response="0100000000110011" foes="0100001110110011"/>
+        <request index="14" response="0000000000000000" foes="0011010001001100"/>
+        <request index="15" response="0000000000110011" foes="0000001110110011"/>
+    </junction>
+    <junction id="4" type="priority" x="100.00" y="0.00" incLanes="einstein_0 eron_0 eron_1 eron_2 eron_3 faraday_0 faraday_1" intLanes="" shape="96.80,4.00 103.20,4.00 104.71,1.78 106.60,1.00 109.24,0.44 112.64,0.11 116.80,0.00 116.80,-12.80 114.58,-13.24 113.80,-13.80 113.24,-14.58 112.91,-15.58 112.80,-16.80 100.00,-16.80 99.80,-13.62 99.20,-11.02 98.20,-9.00 96.80,-7.56 95.00,-6.69 92.80,-6.40 92.80,0.00 95.02,0.44 95.80,1.00 96.36,1.78 96.69,2.78">
+        <request index="0"  response="00000110000" foes="11000110000"/>
+        <request index="1"  response="00000000000" foes="01111000001"/>
+        <request index="2"  response="00000000000" foes="01111000001"/>
+        <request index="3"  response="00000000000" foes="01111000001"/>
+        <request index="4"  response="00000000000" foes="01111000001"/>
+        <request index="5"  response="00000000000" foes="11111000001"/>
+        <request index="6"  response="00000111111" foes="00000111111"/>
+        <request index="7"  response="00000111111" foes="00000111111"/>
+        <request index="8"  response="00000111111" foes="00000111111"/>
+        <request index="9"  response="00000110001" foes="00000110001"/>
+        <request index="10" response="00000100001" foes="00000100001"/>
+    </junction>
+    <junction id="5" type="priority" x="150.00" y="0.00" incLanes="joules_three_0 joules_three_1 -square_0 -square_1 newton_0 newton_1 newton_2 newton_3" intLanes="" shape="143.60,10.40 156.40,10.40 156.84,8.18 157.40,7.40 158.18,6.84 159.18,6.51 160.40,6.40 160.40,-6.40 157.22,-6.69 154.62,-7.56 152.60,-9.00 151.16,-11.02 150.29,-13.62 150.00,-16.80 143.60,-16.80 143.16,-14.58 142.60,-13.80 141.82,-13.24 140.82,-12.91 139.60,-12.80 139.60,0.00 141.82,1.16 142.60,2.60 143.16,4.62 143.49,7.22">
+        <request index="0"  response="11111101000000" foes="11111101000000"/>
+        <request index="1"  response="11111101010000" foes="11111101010000"/>
+        <request index="2"  response="11011001010000" foes="11011001010000"/>
+        <request index="3"  response="00000000000000" foes="10010000000000"/>
+        <request index="4"  response="01101101000000" foes="01101101100111"/>
+        <request index="5"  response="00000000010000" foes="10010000010000"/>
+        <request index="6"  response="01101100000000" foes="01101100010111"/>
+        <request index="7"  response="01000000000000" foes="01000000000000"/>
+        <request index="8"  response="00000000000000" foes="00100001010011"/>
+        <request index="9"  response="00000000000000" foes="00100011010111"/>
+        <request index="10" response="01000000101000" foes="01100000101111"/>
+        <request index="11" response="00011100000000" foes="00011101000001"/>
+        <request index="12" response="00000000000000" foes="00010011010111"/>
+        <request index="13" response="00000000101000" foes="00000000101111"/>
+    </junction>
+    <junction id="6" type="priority" x="50.00" y="50.00" incLanes="-euler_0 kirchoff_0" intLanes="" shape="53.20,53.20 53.20,46.80 46.80,46.80 47.51,50.36 48.40,51.60 49.64,52.49 51.24,53.02">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="J0" type="priority" x="0.00" y="-80.00" incLanes="aveneue_0 aveneue_1" intLanes="" shape="0.00,-73.60 6.40,-73.60 6.40,-80.00 2.84,-79.29 1.60,-78.40 0.71,-77.16 0.18,-75.56">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="J1" type="priority" x="100.00" y="50.00" incLanes="-einstein_0 euler_0" intLanes="" shape="103.20,46.80 96.80,46.80 96.80,53.20 100.36,52.49 101.60,51.60 102.49,50.36 103.02,48.76">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="J2" type="priority" x="150.00" y="-120.00" incLanes="ohm_0 ohm_1" intLanes="" shape="150.00,-120.00 146.00,-125.00 150.00,-120.00">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="J3" type="priority" x="0.00" y="75.00" incLanes="-joules_two_0 -joules_two_1 joules_one_0 joules_one_1" intLanes="" shape="6.40,81.40 6.40,68.60 -6.40,68.60 -6.04,72.51 -4.98,75.71 -3.20,78.20 -0.71,79.98 2.49,81.04">
         <request index="0" response="0000" foes="0000"/>
         <request index="1" response="0000" foes="0000"/>
         <request index="2" response="0000" foes="0000"/>
         <request index="3" response="0000" foes="0000"/>
     </junction>
-    <junction id="3" type="priority" x="100.00" y="-80.00" incLanes="arquimedes_0 arquimedes_1 arquimedes_2 arquimedes_3" intLanes="" shape="100.00,-80.00 112.80,-80.00 112.44,-83.91 111.38,-87.11 109.60,-89.60 107.11,-91.38 103.91,-92.44 100.00,-92.80">
+    <junction id="J4" type="priority" x="150.00" y="75.00" incLanes="-joules_three_0 -joules_three_1 joules_two_0 joules_two_1" intLanes="" shape="156.40,68.60 143.60,68.60 143.60,81.40 147.51,81.04 150.71,79.98 153.20,78.20 154.98,75.71 156.04,72.51">
         <request index="0" response="0000" foes="0000"/>
         <request index="1" response="0000" foes="0000"/>
         <request index="2" response="0000" foes="0000"/>
         <request index="3" response="0000" foes="0000"/>
     </junction>
-    <junction id="4" type="priority" x="100.00" y="0.00" incLanes="einstein_0 eron_0 eron_1 eron_2 eron_3 faraday_0 faraday_1" intLanes="" shape="96.80,4.00 100.00,4.00 101.87,1.78 104.20,1.00 107.47,0.44 111.67,0.11 116.80,0.00 116.80,-12.80 114.58,-13.24 113.80,-13.80 113.24,-14.58 112.91,-15.58 112.80,-16.80 100.00,-16.80 99.80,-13.62 99.20,-11.02 98.20,-9.00 96.80,-7.56 95.00,-6.69 92.80,-6.40 92.80,0.00 95.02,0.44 95.80,1.00 96.36,1.78 96.69,2.78">
-        <request index="0" response="000010000" foes="100010000"/>
-        <request index="1" response="000000000" foes="111100001"/>
-        <request index="2" response="000000000" foes="111100001"/>
-        <request index="3" response="000000000" foes="111100001"/>
-        <request index="4" response="000000000" foes="111100001"/>
-        <request index="5" response="000011111" foes="000011111"/>
-        <request index="6" response="000011111" foes="000011111"/>
-        <request index="7" response="000011111" foes="000011111"/>
-        <request index="8" response="000010001" foes="000010001"/>
+    <junction id="J5" type="priority" x="-50.00" y="0.00" incLanes="-pi_0 -pi_1" intLanes="" shape="-50.00,0.00 -50.00,6.40 -50.00,0.00">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
     </junction>
-    <junction id="5" type="dead_end" x="150.00" y="0.00" incLanes="newton_0 newton_1 newton_2 newton_3" intLanes="" shape="150.00,-12.80 150.00,0.00"/>
-    <junction id="6" type="priority" x="50.00" y="50.00" incLanes="kirchoff_0" intLanes="" shape="53.20,50.00 53.20,46.80 50.00,46.80 50.36,48.58 50.80,49.20 51.42,49.64 52.22,49.91">
-        <request index="0" response="0" foes="0"/>
+    <junction id="J6" type="priority" x="200.00" y="0.00" incLanes="square_0 square_1" intLanes="" shape="200.00,0.00 200.00,-6.40 200.00,0.00">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
     </junction>
-    <junction id="J1" type="priority" x="100.00" y="50.00" incLanes="euler_0" intLanes="" shape="100.00,46.80 96.80,46.80 96.80,50.00 98.58,49.64 99.20,49.20 99.64,48.58 99.91,47.78">
-        <request index="0" response="0" foes="0"/>
+    <junction id="J7" type="priority" x="150.00" y="-80.00" incLanes="brigadeiroB_0 brigadeiroB_1" intLanes="" shape="143.60,-73.60 150.00,-73.60 149.29,-77.16 148.40,-78.40 147.16,-79.29 145.56,-79.82 143.60,-80.00">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
+    </junction>
+    <junction id="Watt" type="priority" x="0.00" y="-120.00" incLanes="-watt_0 -watt_1" intLanes="" shape="0.00,-120.00 -4.00,-115.00 0.00,-120.00">
+        <request index="0" response="00" foes="00"/>
+        <request index="1" response="00" foes="00"/>
     </junction>
 
-    <connection from="arquimedes" to="eron" fromLane="0" toLane="0" dir="l" state="M"/>
-    <connection from="arquimedes" to="eron" fromLane="1" toLane="1" dir="l" state="M"/>
-    <connection from="arquimedes" to="eron" fromLane="2" toLane="2" dir="l" state="M"/>
-    <connection from="arquimedes" to="eron" fromLane="3" toLane="3" dir="l" state="M"/>
+    <connection from="-einstein" to="-euler" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from="-euler" to="-kirchoff" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from="-joules_one" to="-pi" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="-joules_one" to="-pi" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from="-joules_one" to="maxwell" fromLane="1" toLane="1" dir="l" state="m"/>
+    <connection from="-joules_three" to="-joules_two" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from="-joules_three" to="-joules_two" fromLane="1" toLane="1" dir="l" state="M"/>
+    <connection from="-joules_two" to="-joules_one" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from="-joules_two" to="-joules_one" fromLane="1" toLane="1" dir="l" state="M"/>
+    <connection from="-kirchoff" to="pitagoras" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from="-kirchoff" to="pitagoras" fromLane="0" toLane="1" dir="s" state="m"/>
+    <connection from="-kirchoff" to="pitagoras" fromLane="0" toLane="2" dir="s" state="m"/>
+    <connection from="-kirchoff" to="faraday" fromLane="0" toLane="1" dir="l" state="m"/>
+    <connection from="-ohm" to="eron" fromLane="0" toLane="1" dir="r" state="m"/>
+    <connection from="-ohm" to="eron" fromLane="0" toLane="3" dir="r" state="m"/>
+    <connection from="-ohm" to="eron" fromLane="1" toLane="2" dir="r" state="m"/>
+    <connection from="-ohm" to="ohm" fromLane="1" toLane="1" dir="t" state="m"/>
+    <connection from="-pi" to="pi" fromLane="0" toLane="0" dir="t" state="M"/>
+    <connection from="-pi" to="pi" fromLane="1" toLane="1" dir="t" state="M"/>
+    <connection from="-square" to="-joules_three" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="-square" to="brigadeiroB" fromLane="0" toLane="1" dir="l" state="m"/>
+    <connection from="-square" to="-joules_three" fromLane="1" toLane="1" dir="r" state="m"/>
+    <connection from="-square" to="brigadeiroB" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="-square" to="square" fromLane="1" toLane="1" dir="t" state="m"/>
+    <connection from="-watt" to="watt" fromLane="0" toLane="0" dir="t" state="M"/>
+    <connection from="-watt" to="watt" fromLane="1" toLane="1" dir="t" state="M"/>
+    <connection from="arquimedes" to="ohm" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="arquimedes" to="eron" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="arquimedes" to="eron" fromLane="2" toLane="1" dir="l" state="m"/>
+    <connection from="arquimedes" to="ohm" fromLane="3" toLane="1" dir="s" state="M"/>
+    <connection from="arquimedes" to="eron" fromLane="3" toLane="2" dir="l" state="m"/>
+    <connection from="aveneue" to="brigadeiro" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="aveneue" to="brigadeiro" fromLane="1" toLane="1" dir="r" state="M"/>
+    <connection from="aveneueb" to="eron" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="aveneueb" to="eron" fromLane="0" toLane="3" dir="r" state="M"/>
+    <connection from="aveneueb" to="ohm" fromLane="0" toLane="0" dir="l" state="m"/>
+    <connection from="aveneueb" to="ohm" fromLane="0" toLane="1" dir="l" state="m"/>
+    <connection from="aveneueb" to="eron" fromLane="1" toLane="1" dir="r" state="m"/>
+    <connection from="aveneueb" to="eron" fromLane="1" toLane="2" dir="r" state="m"/>
+    <connection from="aveneueb" to="ohm" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="brigadeiro" to="maxwell" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="brigadeiro" to="maxwell" fromLane="0" toLane="2" dir="r" state="M"/>
+    <connection from="brigadeiro" to="joules_one" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from="brigadeiro" to="-pi" fromLane="0" toLane="0" dir="l" state="m"/>
+    <connection from="brigadeiro" to="maxwell" fromLane="1" toLane="1" dir="r" state="m"/>
+    <connection from="brigadeiro" to="joules_one" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from="brigadeiro" to="-pi" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="brigadeiroB" to="aveneueb" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="brigadeiroB" to="aveneueb" fromLane="1" toLane="1" dir="r" state="M"/>
     <connection from="einstein" to="newton" fromLane="0" toLane="3" dir="l" state="m"/>
     <connection from="eron" to="newton" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from="eron" to="newton" fromLane="1" toLane="1" dir="r" state="M"/>
     <connection from="eron" to="newton" fromLane="2" toLane="2" dir="r" state="M"/>
     <connection from="eron" to="newton" fromLane="3" toLane="3" dir="r" state="M"/>
+    <connection from="eron" to="-einstein" fromLane="3" toLane="0" dir="s" state="M"/>
     <connection from="euler" to="einstein" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from="faraday" to="newton" fromLane="0" toLane="0" dir="s" state="m"/>
     <connection from="faraday" to="newton" fromLane="0" toLane="1" dir="s" state="m"/>
     <connection from="faraday" to="newton" fromLane="1" toLane="2" dir="s" state="m"/>
     <connection from="faraday" to="newton" fromLane="1" toLane="3" dir="s" state="m"/>
+    <connection from="faraday" to="-einstein" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="joules_one" to="joules_two" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="joules_one" to="joules_two" fromLane="1" toLane="1" dir="r" state="M"/>
+    <connection from="joules_three" to="brigadeiroB" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from="joules_three" to="brigadeiroB" fromLane="0" toLane="1" dir="s" state="m"/>
+    <connection from="joules_three" to="square" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="joules_two" to="joules_three" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="joules_two" to="joules_three" fromLane="1" toLane="1" dir="r" state="M"/>
     <connection from="kirchoff" to="euler" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from="maxwell" to="faraday" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from="maxwell" to="pitagoras" fromLane="1" toLane="1" dir="r" state="m"/>
-    <connection from="maxwell" to="faraday" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from="maxwell" to="pitagoras" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from="maxwell" to="pitagoras" fromLane="0" toLane="2" dir="r" state="M"/>
+    <connection from="maxwell" to="faraday" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from="maxwell" to="faraday" fromLane="1" toLane="1" dir="s" state="m"/>
+    <connection from="maxwell" to="pitagoras" fromLane="2" toLane="1" dir="r" state="m"/>
+    <connection from="maxwell" to="faraday" fromLane="2" toLane="0" dir="s" state="M"/>
     <connection from="maxwell" to="kirchoff" fromLane="2" toLane="0" dir="l" state="M"/>
+    <connection from="newton" to="brigadeiroB" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from="newton" to="square" fromLane="1" toLane="0" dir="s" state="M"/>
+    <connection from="newton" to="-joules_three" fromLane="2" toLane="0" dir="l" state="m"/>
+    <connection from="newton" to="brigadeiroB" fromLane="3" toLane="0" dir="r" state="m"/>
+    <connection from="newton" to="square" fromLane="3" toLane="1" dir="s" state="M"/>
+    <connection from="newton" to="-joules_three" fromLane="3" toLane="1" dir="l" state="m"/>
+    <connection from="ohm" to="-ohm" fromLane="0" toLane="0" dir="t" state="M"/>
+    <connection from="ohm" to="-ohm" fromLane="1" toLane="1" dir="t" state="M"/>
+    <connection from="pi" to="maxwell" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from="pi" to="maxwell" fromLane="0" toLane="2" dir="s" state="m"/>
+    <connection from="pi" to="joules_one" fromLane="0" toLane="0" dir="l" state="m"/>
+    <connection from="pi" to="maxwell" fromLane="1" toLane="1" dir="s" state="m"/>
+    <connection from="pi" to="joules_one" fromLane="1" toLane="1" dir="l" state="m"/>
+    <connection from="pitagoras" to="aveneue" fromLane="0" toLane="1" dir="r" state="M"/>
+    <connection from="pitagoras" to="-watt" fromLane="0" toLane="0" dir="R" state="M"/>
     <connection from="pitagoras" to="arquimedes" fromLane="0" toLane="0" dir="l" state="M"/>
-    <connection from="pitagoras" to="arquimedes" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from="pitagoras" to="arquimedes" fromLane="1" toLane="1" dir="l" state="M"/>
     <connection from="pitagoras" to="arquimedes" fromLane="1" toLane="2" dir="l" state="M"/>
+    <connection from="pitagoras" to="aveneue" fromLane="2" toLane="0" dir="r" state="m"/>
+    <connection from="pitagoras" to="-watt" fromLane="2" toLane="1" dir="R" state="m"/>
     <connection from="pitagoras" to="arquimedes" fromLane="2" toLane="3" dir="l" state="M"/>
+    <connection from="square" to="-square" fromLane="0" toLane="0" dir="t" state="M"/>
+    <connection from="square" to="-square" fromLane="1" toLane="1" dir="t" state="M"/>
+    <connection from="watt" to="arquimedes" fromLane="0" toLane="0" dir="s" state="m"/>
+    <connection from="watt" to="arquimedes" fromLane="0" toLane="3" dir="s" state="m"/>
+    <connection from="watt" to="aveneue" fromLane="0" toLane="1" dir="l" state="m"/>
+    <connection from="watt" to="-watt" fromLane="0" toLane="0" dir="t" state="m"/>
+    <connection from="watt" to="arquimedes" fromLane="1" toLane="1" dir="s" state="m"/>
+    <connection from="watt" to="arquimedes" fromLane="1" toLane="2" dir="s" state="m"/>
+    <connection from="watt" to="aveneue" fromLane="1" toLane="0" dir="l" state="m"/>
+    <connection from="watt" to="-watt" fromLane="1" toLane="1" dir="t" state="m"/>
 
 </net>

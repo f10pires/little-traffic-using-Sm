@@ -17,6 +17,7 @@ def main():
     startSim()
 
     while shouldContinueSim():
+        getOurDeparted(filterIds=[])
         traci.simulationStep()
 
     traci.close()
@@ -49,7 +50,6 @@ def shouldContinueSim():
 def getOurDeparted(filterIds=[]):
     num_vehicle = traci.vehicle.getIDCount()  # Return a number of vehicles
     IDs_v = traci.vehicle.getIDList()  # Return a tuple with the IDs
-
     """Returns a set of filtered vehicle IDs that departed onto the network during this simulation step.
     Args:
         filterIds ([String]): The set of vehicle IDs to filter for.

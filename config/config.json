@@ -3,6 +3,8 @@
     "route-files": "config/routes.trip.xml",
     "additional-files": "config/additional.add.xml",
     "gui-settings-file": "config/viewssettings.xml",
-    "delay": "100",
-    "start": true
+    "delay": "200",
+    "start": true,
+    "step": 0,
+    "Max_time" : 200
 }
