@@ -12,14 +12,19 @@ with open(r'config/config.json', 'r') as config_file:
 def main():
     startSim()
 
+    "Variables"
     veh_counter = 0                                                                                 # vehicle counter
     random.seed(1)                                                                                  # reproduction
 
     MAX_TIME = config["Max_time"]                                                                   # extreme time of simulation (s)
 
+    bus_stop = traci.busstop.getIDList()                                                            # bus stops id
+    parking = traci.parkingarea.getIDList()
+
+    """Simularion"""
     while traci.simulation.getTime() < MAX_TIME:
         if int(traci.simulation.getTime()) % 2 == 0:                                                # return real time of simulation
-            addRandomVehicle(f"veh_{veh_counter}")
+            addRandomVehicle(f"veh_{veh_counter}",bus_stop,parking)
             veh_counter += 1
 
         traci.simulationStep()
@@ -40,7 +45,8 @@ def startSim():
     )
 
 """Create a vehicle with origin and destinetion """
-def addRandomVehicle(veh_id):
+def addRandomVehicle(veh_id,bus_stop,parking):
+
     veh_type = random.choice(config["vehicles"])                                                   # aleatory vType
     edges = possible_routes(veh_type)
 
@@ -71,13 +77,21 @@ def addRandomVehicle(veh_id):
             
             if veh_type == "bus":
                 traci.vehicle.setColor(veh_id, (255, 0, 0))                                     # bus is red
-            else:
-                traci.vehicle.setColor(
-                    veh_id,
-                    color
-                )
 
-            return                                                                               # success                                                                             
+                stop_id = random.choice(bus_stop)
+                
+                if busStopIsOnRoute(route.edges, stop_id):
+                    traci.vehicle.setBusStop(veh_id, stop_id, 10)
+            else:
+                parkingID = random.choice(parking)
+                traci.vehicle.setColor(veh_id, color)
+
+                if parkingIsOnRoute(route.edges, parkingID):
+                    traci.vehicle.setParkingAreaStop(veh_id, parkingID, 20)
+                    color = (255,255,255)                                                       # The vehicle that stop in parking is white
+                    traci.vehicle.setColor(veh_id, color)
+
+        return                                                                                   # success                                                                             
 
     print(f"⚠️ It was not possible to create a route for {veh_id}")                             # in this case it's not possible to create a route
 
@@ -109,6 +123,20 @@ def possible_routes(veh_type):
                     break
 
     return valid_edges
+
+"""Verify if bus stos is on route"""
+def busStopIsOnRoute(route_edges, busStopID):
+
+    lane_id = traci.busstop.getLaneID(busStopID)
+    edge_id = lane_id.split("_")[0]
+
+    return edge_id in route_edges
+
+"""Verify if there is parking on route"""
+def parkingIsOnRoute(route_edges, parkingID):
+    lane_id = traci.parkingarea.getLaneID(parkingID)
+    edge_id = lane_id.split("_")[0]
+    return edge_id in route_edges
 
 if __name__ == "__main__":
     main()
