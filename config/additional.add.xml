@@ -13,7 +13,7 @@
         maxSpeed="33.33"
         guiShape="evehicle"
     />
-
+    
     <!-- Bus -->
     <vType
         id="bus"

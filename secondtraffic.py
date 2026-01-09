@@ -2,6 +2,8 @@ import traci
 from sumolib import checkBinary
 import json
 import random
+from pathlib import Path
+import csv
 
 sumoBinary = checkBinary('sumo-gui')
 
@@ -10,24 +12,30 @@ with open(r'config/config.json', 'r') as config_file:
     config = json.load(config_file)
 
 def main():
+    init_csv()
     startSim()
 
     "Variables"
     veh_counter = 0                                                                                 # vehicle counter
-    random.seed(1)                                                                                  # reproduction
+    random.seed(42)                                                                                  # reproduction
 
     MAX_TIME = config["Max_time"]                                                                   # extreme time of simulation (s)
 
     bus_stop = traci.busstop.getIDList()                                                            # bus stops id
     parking = traci.parkingarea.getIDList()
 
+    VehicleWR = select_vehicle(MAX_TIME)                                                           # Vehicle identification that will be recorded in the log. 
+
     """Simularion"""
     while traci.simulation.getTime() < MAX_TIME:
         if int(traci.simulation.getTime()) % 2 == 0:                                                # return real time of simulation
-            addRandomVehicle(f"veh_{veh_counter}",bus_stop,parking)
+            type = addRandomVehicle(f"veh_{veh_counter}",bus_stop,parking)
             veh_counter += 1
 
         traci.simulationStep()
+
+        if f"veh_{VehicleWR}" in traci.vehicle.getIDList():
+            register(VehicleWR,traci.simulation.getTime(),traci.vehicle.getTypeID(f"veh_{VehicleWR}"))
 
     traci.close()
 
@@ -91,7 +99,7 @@ def addRandomVehicle(veh_id,bus_stop,parking):
                     color = (255,255,255)                                                       # The vehicle that stop in parking is white
                     traci.vehicle.setColor(veh_id, color)
 
-        return                                                                                   # success                                                                             
+        return veh_type                                                                                   # success                                                                             
 
     print(f"⚠️ It was not possible to create a route for {veh_id}")                             # in this case it's not possible to create a route
 
@@ -137,6 +145,49 @@ def parkingIsOnRoute(route_edges, parkingID):
     lane_id = traci.parkingarea.getLaneID(parkingID)
     edge_id = lane_id.split("_")[0]
     return edge_id in route_edges
+
+"""Select aleatory ID"""
+def select_vehicle(MAX_TIME):
+    IDnumbers = []
+    for i in range(int(MAX_TIME/2)):
+        IDnumbers.append(i)
+    return random.choice(IDnumbers)
+
+"Register informations about vehicle"
+def init_csv():
+    base_dir = Path(__file__).resolve().parent
+    pasta_storing = base_dir / "storing"
+    pasta_storing.mkdir(parents=True, exist_ok=True)
+
+    arquivo_csv = pasta_storing / "vehicles.csv"
+
+    """clear vegicles.csv"""
+    with open(arquivo_csv, mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(["ID","Atual route","TYPE", "timestamp"]) 
+    return
+
+def register(ID, TIME,TYPE):
+    base_dir = Path(__file__).resolve().parent
+    pasta_storing = base_dir / "storing"
+    pasta_storing.mkdir(parents=True, exist_ok=True)
+
+    arquivo_csv = pasta_storing / "vehicles.csv"
+
+    veh_id = f"veh_{ID}"
+
+    if veh_id not in traci.vehicle.getIDList():
+        return
+
+    road_id = traci.vehicle.getRoadID(veh_id)
+
+    """"ignore internal edges"""
+    if road_id.startswith(":"):
+        return
+
+    with open(arquivo_csv, mode="a", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow([ID, road_id,TYPE, TIME])
 
 if __name__ == "__main__":
     main()
