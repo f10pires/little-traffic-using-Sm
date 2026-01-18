@@ -3,17 +3,39 @@
     <!-- ================== TYPES OF VEHICLES ================== -->
 
     <!-- Car -->
-    <vType
-        id="evehicle"
-        vClass="evehicle"
-        accel="2.6"
-        decel="4.5"
-        length="5.0"
-        minGap="2.5"
-        maxSpeed="33.33"
-        guiShape="evehicle"
-    />
-    
+
+    <routes>
+
+        <vType id="evehicle"
+            vClass="passenger"
+            energyModel="electric"
+            
+            length="5.0"
+            width="1.8"
+            height="1.5"
+            mass="1500"
+            minGap="2.5"
+
+            accel="2.6"
+            decel="4.5"
+            emergencyDecel="9.0"
+            maxSpeed="33.33"
+
+            personCapacity="4"
+            guiShape="evehicle"
+            emissionClass="zero">
+
+            <param key="device.battery.probability" value="1.0"/>
+            <param key="has.battery.device" value="true"/>
+            <param key="device.battery.capacity" value="35000"/>
+            <param key="device.battery.chargeLevel" value="17500"/>
+            <param key="device.battery.maximumPowerRate" value="150000"/>
+            <param key="constantPowerIntake" value="10000"/>
+
+        </vType>
+
+    </routes>
+
     <!-- Bus -->
     <vType
         id="bus"
@@ -62,6 +84,19 @@
         roadsideCapacity="5"
         angle="0"
         length="20"
+    />
+
+    <!-- ================== Charging Station ================== -->
+
+    <chargingStation
+        chargeDelay="2"
+        chargeInTransit="0"
+        power="200000"
+        efficiency="0.95"
+        endPos="45"
+        id="Carregamento Principal"
+        lane="arquimedes_0"
+        startPos="25"
     />
 
 </additional>

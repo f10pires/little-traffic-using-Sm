@@ -1,70 +1,191 @@
-<routes>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <vType id="type1" accel="2.6" decel="4.5" sigma="0.5" length="5" maxSpeed="70"/>
-    <vType id="bus" length="15" maxSpeed="30" accel="1.2" decel="2.5" sigma="0.1" speedDev="0.1" vClass="bus"/>
-    
-     <vehicle id="veh1" type="type1" depart="0">
-	<route edges="maxwell faraday newton"/>
-    </vehicle>
+<!-- generated on 2026-01-18 19:55:34.693984 by Eclipse SUMO randomTrips.py v1_25_0+0000-ac6c5a6752d
+<configuration>
+    <net-file value="config/net.net.xml"/>
+    <output-trip-file value="config/trips.trips.xml"/>
+    <route-file value="config/routes.trip.xml"/>
+    <end value="500.0"/>
+    <period value="10.0"/>
+</configuration>
+-->
 
-    <vehicle id="bus1" type="bus" depart="1" color="0,0,1">
-        <route edges="maxwell kirchoff euler einstein newton"/>
-    </vehicle>
+<!-- generated on 2026-01-18T19:55:34.628182-03:00 by Eclipse SUMO duarouter 1.25.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
 
-    <vehicle id="veh2" type="type1" depart="2">
-	<route edges="maxwell faraday newton"/>
-    </vehicle>
+    <input>
+        <net-file value="config/net.net.xml"/>
+        <route-files value="config/trips.trips.xml"/>
+    </input>
 
-    <vehicle id="bus2" type="bus" depart="3" color="0,0,1">
-        <route edges="maxwell kirchoff euler einstein newton"/>
-    </vehicle>
+    <output>
+        <output-file value="config/routes.trip.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
 
-    <vehicle id="veh3" type="type1" depart="4">
-	<route edges="maxwell faraday newton"/>
-    </vehicle>
+    <time>
+        <begin value="0"/>
+        <end value="500.0"/>
+    </time>
 
-    <vehicle id="bus3" type="bus" depart="5" color="1,0,0">
-        <route edges="maxwell kirchoff euler einstein newton"/>
-        <stop busStop="checkpoint3" duration="20"/>
-    </vehicle>
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
 
-    <vehicle id="veh4" type="type1" depart="6">
-	<route edges="maxwell faraday newton"/>
-    </vehicle>
-    
-    <vehicle id="ved1" type="type1" depart="6" color="1,1,1">
-	<route edges="maxwell pitagoras arquimedes eron newton"/>
-    <stop parkingArea="ParkAreaA" duration="20"/>
-    </vehicle>
-    
-    <vehicle id="ved2" type="type1" depart="7">
-	<route edges="maxwell pitagoras arquimedes eron newton"/>
-    </vehicle>
+</duarouterConfiguration>
+-->
 
-    <vehicle id="veh5" type="type1" depart="8">
-	<route edges="maxwell faraday newton"/>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0" depart="0.00">
+        <route edges="joules_one joules_two joules_three square -square -joules_three -joules_two -joules_one"/>
     </vehicle>
-
-    <vehicle id="veh6" type="type1" depart="10">
-	<route edges="maxwell faraday newton"/>
+    <vehicle id="1" depart="10.00">
+        <route edges="arquimedes eron newton -joules_three -joules_two -joules_one maxwell pitagoras -watt"/>
     </vehicle>
-
-    <vehicle id="ved3" type="type1" depart="10" color="1,1,1">
-	<route edges="maxwell pitagoras arquimedes eron newton"/>
-    <stop parkingArea="ParkAreaA" duration="20"/>
+    <vehicle id="2" depart="20.00">
+        <route edges="joules_two joules_three"/>
     </vehicle>
-
-    <vehicle id="bus4" type="bus" depart="11" color="1,0,0">
-        <route edges="maxwell pitagoras arquimedes eron newton"/>
-        <stop busStop="checkpoint1" duration="20"/>
+    <vehicle id="3" depart="30.00">
+        <route edges="pi maxwell faraday newton -joules_three"/>
     </vehicle>
-
-    <vehicle id="bus5" type="bus" depart="13" color="1,0,0">
-        <route edges="maxwell pitagoras arquimedes eron newton"/>
-        <stop busStop="checkpoint2" duration="10"/>
+    <vehicle id="4" depart="40.00">
+        <route edges="brigadeiro maxwell faraday newton -joules_three -joules_two -joules_one"/>
     </vehicle>
-
-
+    <vehicle id="5" depart="50.00">
+        <route edges="-square brigadeiroB aveneueb eron"/>
+    </vehicle>
+    <vehicle id="6" depart="60.00">
+        <route edges="-joules_one -pi"/>
+    </vehicle>
+    <vehicle id="7" depart="70.00">
+        <route edges="joules_one joules_two joules_three brigadeiroB aveneueb eron"/>
+    </vehicle>
+    <vehicle id="8" depart="80.00">
+        <route edges="-square -joules_three -joules_two -joules_one maxwell faraday"/>
+    </vehicle>
+    <vehicle id="9" depart="90.00">
+        <route edges="newton -joules_three -joules_two -joules_one"/>
+    </vehicle>
+    <vehicle id="10" depart="100.00">
+        <route edges="newton -joules_three -joules_two -joules_one joules_one joules_two joules_three"/>
+    </vehicle>
+    <vehicle id="11" depart="110.00">
+        <route edges="aveneue brigadeiro -pi"/>
+    </vehicle>
+    <vehicle id="12" depart="120.00">
+        <route edges="watt aveneue"/>
+    </vehicle>
+    <vehicle id="13" depart="130.00">
+        <route edges="-joules_three"/>
+    </vehicle>
+    <vehicle id="14" depart="140.00">
+        <route edges="newton -joules_three -joules_two -joules_one joules_one"/>
+    </vehicle>
+    <vehicle id="15" depart="150.00">
+        <route edges="newton -joules_three -joules_two -joules_one joules_one joules_two"/>
+    </vehicle>
+    <vehicle id="16" depart="160.00">
+        <route edges="eron newton square"/>
+    </vehicle>
+    <vehicle id="17" depart="170.00">
+        <route edges="aveneueb eron newton -joules_three -joules_two -joules_one maxwell faraday"/>
+    </vehicle>
+    <vehicle id="18" depart="180.00">
+        <route edges="newton -joules_three -joules_two -joules_one joules_one"/>
+    </vehicle>
+    <vehicle id="19" depart="190.00">
+        <route edges="pi maxwell faraday"/>
+    </vehicle>
+    <vehicle id="20" depart="200.00">
+        <route edges="joules_two joules_three square -square -joules_three -joules_two -joules_one"/>
+    </vehicle>
+    <vehicle id="21" depart="210.00">
+        <route edges="-square -joules_three -joules_two -joules_one maxwell pitagoras arquimedes"/>
+    </vehicle>
+    <vehicle id="22" depart="220.00">
+        <route edges="-joules_three -joules_two -joules_one maxwell pitagoras -watt"/>
+    </vehicle>
+    <vehicle id="23" depart="230.00">
+        <route edges="-joules_two -joules_one maxwell pitagoras arquimedes"/>
+    </vehicle>
+    <vehicle id="24" depart="240.00">
+        <route edges="joules_one joules_two joules_three brigadeiroB aveneueb"/>
+    </vehicle>
+    <vehicle id="25" depart="250.00">
+        <route edges="aveneueb eron newton -joules_three -joules_two -joules_one maxwell pitagoras -watt"/>
+    </vehicle>
+    <vehicle id="26" depart="260.00">
+        <route edges="arquimedes eron newton -joules_three -joules_two -joules_one maxwell pitagoras"/>
+    </vehicle>
+    <vehicle id="27" depart="270.00">
+        <route edges="joules_one"/>
+    </vehicle>
+    <vehicle id="28" depart="280.00">
+        <route edges="-ohm eron newton -joules_three -joules_two -joules_one joules_one joules_two"/>
+    </vehicle>
+    <vehicle id="29" depart="290.00">
+        <route edges="-ohm eron newton brigadeiroB aveneueb"/>
+    </vehicle>
+    <vehicle id="30" depart="300.00">
+        <route edges="watt aveneue brigadeiro joules_one"/>
+    </vehicle>
+    <vehicle id="31" depart="310.00">
+        <route edges="faraday newton -joules_three -joules_two -joules_one joules_one joules_two joules_three"/>
+    </vehicle>
+    <vehicle id="32" depart="320.00">
+        <route edges="newton -joules_three -joules_two -joules_one maxwell"/>
+    </vehicle>
+    <vehicle id="33" depart="330.00">
+        <route edges="-square -joules_three -joules_two -joules_one"/>
+    </vehicle>
+    <vehicle id="34" depart="340.00">
+        <route edges="aveneue brigadeiro maxwell pitagoras arquimedes"/>
+    </vehicle>
+    <vehicle id="35" depart="350.00">
+        <route edges="-square -joules_three -joules_two -joules_one maxwell pitagoras"/>
+    </vehicle>
+    <vehicle id="36" depart="360.00">
+        <route edges="pi maxwell pitagoras aveneue"/>
+    </vehicle>
+    <vehicle id="37" depart="370.00">
+        <route edges="joules_three brigadeiroB aveneueb"/>
+    </vehicle>
+    <vehicle id="38" depart="380.00">
+        <route edges="pitagoras arquimedes eron newton brigadeiroB"/>
+    </vehicle>
+    <vehicle id="39" depart="390.00">
+        <route edges="arquimedes eron newton -joules_three -joules_two -joules_one maxwell pitagoras -watt"/>
+    </vehicle>
+    <vehicle id="40" depart="400.00">
+        <route edges="faraday newton -joules_three -joules_two -joules_one maxwell pitagoras arquimedes"/>
+    </vehicle>
+    <vehicle id="41" depart="410.00">
+        <route edges="faraday newton brigadeiroB aveneueb ohm"/>
+    </vehicle>
+    <vehicle id="42" depart="420.00">
+        <route edges="aveneueb eron newton -joules_three -joules_two -joules_one maxwell pitagoras -watt"/>
+    </vehicle>
+    <vehicle id="43" depart="430.00">
+        <route edges="watt arquimedes eron"/>
+    </vehicle>
+    <vehicle id="44" depart="440.00">
+        <route edges="-joules_three -joules_two -joules_one"/>
+    </vehicle>
+    <vehicle id="45" depart="450.00">
+        <route edges="-joules_two -joules_one joules_one"/>
+    </vehicle>
+    <vehicle id="46" depart="460.00">
+        <route edges="maxwell pitagoras aveneue brigadeiro"/>
+    </vehicle>
+    <vehicle id="47" depart="470.00">
+        <route edges="-joules_three -joules_two -joules_one maxwell faraday newton brigadeiroB aveneueb"/>
+    </vehicle>
+    <vehicle id="48" depart="480.00">
+        <route edges="watt arquimedes eron"/>
+    </vehicle>
+    <vehicle id="49" depart="490.00">
+        <route edges="watt arquimedes ohm"/>
+    </vehicle>
 </routes>
-
-

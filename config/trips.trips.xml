@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-01-18 19:55:34.465835 by Eclipse SUMO randomTrips.py v1_25_0+0000-ac6c5a6752d
+<configuration>
+    <net-file value="config/net.net.xml"/>
+    <output-trip-file value="config/trips.trips.xml"/>
+    <route-file value="config/routes.trip.xml"/>
+    <end value="500.0"/>
+    <period value="10.0"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="0" depart="0.00" from="joules_one" to="-joules_one"/>
+    <trip id="1" depart="10.00" from="arquimedes" to="-watt"/>
+    <trip id="2" depart="20.00" from="joules_two" to="joules_three"/>
+    <trip id="3" depart="30.00" from="pi" to="-joules_three"/>
+    <trip id="4" depart="40.00" from="brigadeiro" to="-joules_one"/>
+    <trip id="5" depart="50.00" from="-square" to="eron"/>
+    <trip id="6" depart="60.00" from="-joules_one" to="-pi"/>
+    <trip id="7" depart="70.00" from="joules_one" to="eron"/>
+    <trip id="8" depart="80.00" from="-square" to="faraday"/>
+    <trip id="9" depart="90.00" from="newton" to="-joules_one"/>
+    <trip id="10" depart="100.00" from="newton" to="joules_three"/>
+    <trip id="11" depart="110.00" from="aveneue" to="-pi"/>
+    <trip id="12" depart="120.00" from="watt" to="aveneue"/>
+    <trip id="13" depart="130.00" from="-joules_three" to="-joules_three"/>
+    <trip id="14" depart="140.00" from="newton" to="joules_one"/>
+    <trip id="15" depart="150.00" from="newton" to="joules_two"/>
+    <trip id="16" depart="160.00" from="eron" to="square"/>
+    <trip id="17" depart="170.00" from="aveneueb" to="faraday"/>
+    <trip id="18" depart="180.00" from="newton" to="joules_one"/>
+    <trip id="19" depart="190.00" from="pi" to="faraday"/>
+    <trip id="20" depart="200.00" from="joules_two" to="-joules_one"/>
+    <trip id="21" depart="210.00" from="-square" to="arquimedes"/>
+    <trip id="22" depart="220.00" from="-joules_three" to="-watt"/>
+    <trip id="23" depart="230.00" from="-joules_two" to="arquimedes"/>
+    <trip id="24" depart="240.00" from="joules_one" to="aveneueb"/>
+    <trip id="25" depart="250.00" from="aveneueb" to="-watt"/>
+    <trip id="26" depart="260.00" from="arquimedes" to="pitagoras"/>
+    <trip id="27" depart="270.00" from="joules_one" to="joules_one"/>
+    <trip id="28" depart="280.00" from="-ohm" to="joules_two"/>
+    <trip id="29" depart="290.00" from="-ohm" to="aveneueb"/>
+    <trip id="30" depart="300.00" from="watt" to="joules_one"/>
+    <trip id="31" depart="310.00" from="faraday" to="joules_three"/>
+    <trip id="32" depart="320.00" from="newton" to="maxwell"/>
+    <trip id="33" depart="330.00" from="-square" to="-joules_one"/>
+    <trip id="34" depart="340.00" from="aveneue" to="arquimedes"/>
+    <trip id="35" depart="350.00" from="-square" to="pitagoras"/>
+    <trip id="36" depart="360.00" from="pi" to="aveneue"/>
+    <trip id="37" depart="370.00" from="joules_three" to="aveneueb"/>
+    <trip id="38" depart="380.00" from="pitagoras" to="brigadeiroB"/>
+    <trip id="39" depart="390.00" from="arquimedes" to="-watt"/>
+    <trip id="40" depart="400.00" from="faraday" to="arquimedes"/>
+    <trip id="41" depart="410.00" from="faraday" to="ohm"/>
+    <trip id="42" depart="420.00" from="aveneueb" to="-watt"/>
+    <trip id="43" depart="430.00" from="watt" to="eron"/>
+    <trip id="44" depart="440.00" from="-joules_three" to="-joules_one"/>
+    <trip id="45" depart="450.00" from="-joules_two" to="joules_one"/>
+    <trip id="46" depart="460.00" from="maxwell" to="brigadeiro"/>
+    <trip id="47" depart="470.00" from="-joules_three" to="aveneueb"/>
+    <trip id="48" depart="480.00" from="watt" to="eron"/>
+    <trip id="49" depart="490.00" from="watt" to="ohm"/>
+</routes>

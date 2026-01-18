@@ -3,10 +3,13 @@
     "route-files": "config/routes.trip.xml",
     "additional-files": "config/additional.add.xml",
     "gui-settings-file": "config/viewssettings.xml",
+    "trips-file": "config/trips.trips.xml",
+    "random-trip" : "Tools/randomTrips.py",
     "vehicles": ["evehicle","bus"],
+    "period": "10.0",
     "delay": "150",
     "start": true,
     "step": 0,
-    "Max_time" : 500,
+    "Max_time" : 150,
     "RESTRICTED_TYPES" : ["bus"]
 }

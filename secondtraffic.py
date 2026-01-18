@@ -17,7 +17,7 @@ def main():
 
     "Variables"
     veh_counter = 0                                                                                 # vehicle counter
-    random.seed(42)                                                                                  # reproduction
+    random.seed(42)                                                                                 # reproduction
 
     MAX_TIME = config["Max_time"]                                                                   # extreme time of simulation (s)
 
