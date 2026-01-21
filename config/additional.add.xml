@@ -23,14 +23,14 @@
 
             personCapacity="4"
             guiShape="evehicle"
-            emissionClass="zero">
+            emissionClass="Energy/unknown">
 
             <param key="device.battery.probability" value="1.0"/>
             <param key="has.battery.device" value="true"/>
             <param key="device.battery.capacity" value="35000"/>
             <param key="device.battery.chargeLevel" value="17500"/>
             <param key="device.battery.maximumPowerRate" value="150000"/>
-            <param key="constantPowerIntake" value="10000"/>
+            <param key="constantPowerIntake" value="100000"/>
 
         </vType>
 

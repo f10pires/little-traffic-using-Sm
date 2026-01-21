@@ -56,7 +56,7 @@ def init_csv():
                          "== Destination ==",
                          "== Distance from destination(m) ==",
                          "== TYPE ==",
-                         "== Batery level ==",
+                         "== Batery level(%) ==",
                          "== timestamp =="]) 
     return
 
@@ -71,8 +71,9 @@ def generate_random_trips():
         "-r",  config["route-files"],
         "-e", "500",
         "--period", config["period"],
-        "--seed", "42"
+        "--seed", "42",
     ]
+
 
     subprocess.run(cmd, check=True)
 
@@ -81,12 +82,24 @@ def startSim():
     traci.start(
         [
             sumoBinary,
+            # (Input)
             '--net-file', config["net-file"],
             '--route-files', config["route-files"],
             '--additional-files', config["additional-files"],
-            '--gui-settings-file', config["gui-settings-file"],
+            
+            #Configurações 
+            '--step-length', config["step"], 
             '--delay', config["delay"],
-            '--start'
+            
+            #(Output)
+            '--statistic-output', config["statistic-output"],
+            '--duration-log.statistics', 'true',
+            '--tripinfo-output', config["tripinfo-output"],
+
+            #Interface and Control
+            '--gui-settings-file', config["gui-settings-file"],
+            '--start',      
+            '--quit-on-end' 
         ]
     )
 
@@ -190,17 +203,14 @@ def register(ID, TIME, TYPE, ID_ROUTE):
         pos=traci.lane.getLength(f"{destination}_0")
     )
 
+    "dictionary about eletric informations"
+    eletric_informations = {
+        "electricity": traci.vehicle.getElectricityConsumption("MAIN"),                                 #Wh/s
+        "capacity": float(traci.vehicle.getParameter(veh_id, "device.battery.capacity")),               #capacidade maxima (Wh) 
+        "currentCharge": float(traci.vehicle.getParameter(veh_id, "device.battery.chargeLevel"))        #carga atual       (Wh)                                                                             
+    }                                          
 
-    print("charge:",
-        traci.vehicle.getParameter("MAIN",
-        "device.battery.actualBatteryCapacity"))
-    
-    print("electricity:",
-      traci.vehicle.getElectricityConsumption("MAIN"))
-    
-    """Eletric informations"""
-    #charge = traci.vehicle.getParameter(ID,"device.battery.chargeLevel")
-    #print(charge)
+    eletric_informations["stateOfCharge"] = (eletric_informations["currentCharge"]/eletric_informations["capacity"])*100  #estado atual     (%)
 
     """Write data to CSV"""
     with open(arquivo_csv, mode="a", newline="", encoding="utf-8") as file:
@@ -212,8 +222,8 @@ def register(ID, TIME, TYPE, ID_ROUTE):
             destination,
             "{:.1f}".format(dist),
             TYPE,
-            TIME
-            
+            "{:.1f}".format(eletric_informations["stateOfCharge"]),
+            TIME       
         ])
 
 if __name__ == "__main__":
