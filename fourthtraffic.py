@@ -141,7 +141,7 @@ def simulation():
                             traci.vehicle.changeTarget(veh, destino_original)
                             traci.vehicle.setColor(veh, (0, 255, 0, 255))
                             del vehicles_that_return[veh]
-                            print(f" Veículo {veh} carregado. Retornando para {destino_original}")
+                            print(f"Veículo {veh} carregado. Retornando para {destino_original}")
                         except traci.exceptions.TraCIException:
                             pass
                 
@@ -241,7 +241,7 @@ def register(veh_id, TIME, TYPE, ID_ROUTE,VTR):
 
     road_id = traci.vehicle.getRoadID(veh_id)
     if road_id.startswith(":"):
-        return
+        return VTR
 
     try:
         route_edges = traci.route.getEdges(ID_ROUTE)

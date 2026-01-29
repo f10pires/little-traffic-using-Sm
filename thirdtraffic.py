@@ -6,7 +6,6 @@ from pathlib import Path
 import csv
 import subprocess
 import sys
-from sumolib.net import readNet
 
 sumoBinary = checkBinary('sumo-gui')
 
@@ -30,7 +29,6 @@ def main():
     while traci.simulation.getTime() != MAX_TIME:
         if traci.simulation.getTime() == time :
             route_id = addRandomVehicle("MAIN")
-            traci.vehicle.setParameter("MAIN", "has.battery.device", "true")
             
         if  "MAIN" in traci.vehicle.getIDList() :
             register("MAIN", traci.simulation.getTime(),"evehicle",route_id)  
