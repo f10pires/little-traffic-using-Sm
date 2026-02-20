@@ -1,0 +1,19 @@
+<additional>
+
+    <vTypeDistribution id="frota_mista">
+
+        <vType id="carro_random" vClass="passenger" length="5.0" minGap="2.5"
+               maxSpeed="33.33" color="white" probability="0.65"/>
+
+        <vType id="moto_random" vClass="motorcycle" length="2.2" minGap="1.0"
+               maxSpeed="40.0" color="white" probability="0.25" guiShape="motorcycle"/>
+
+        <vType id="caminhao_random" vClass="truck" length="15.0" minGap="4.0"
+               maxSpeed="22.22" color="white" probability="0.05" guiShape="truck"/>
+
+        <vType id="onibus_random" vClass="bus" length="12.0" minGap="3.0"
+               maxSpeed="22.22" color="white" probability="0.05" guiShape="bus"/>
+
+    </vTypeDistribution>
+
+</additional>

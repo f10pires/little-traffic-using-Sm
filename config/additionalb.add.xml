@@ -58,11 +58,11 @@
             emissionClass="Energy/unknown">
             
             <param key="has.battery.device" value="true"/>
-            <param key="device.battery.capacity" value="2000"/>
+            <param key="device.battery.capacity" value="80000"/>
             <param key="maximumPower" value="1000"/>
             <param key="frontSurfaceArea" value="5"/>
             <param key="airDragCoefficient" value="0.6"/>
-            <param key="rotatingMass" value="100"/>
+            <param key="rotatingMass" value="1000"/>
             <param key="radialDragCoefficient" value="0.5"/>
             <param key="rollDragCoefficient" value="0.01"/>
             <param key="constantPowerIntake" value="100"/>

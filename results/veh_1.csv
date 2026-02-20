@@ -1,0 +1,6 @@
+== ID ==,== Velocity (Kh/h) ==,== Atual route ==,== Distance traveled(m) ==,== Destination ==,== Distance from destination(m) ==,== TYPE ==,== Batery level(%) ==,== timestamp ==
+veh_1,0.0,-E131,0.0,E149,215.8,ElectricBus,43.9,497.5
+veh_1,1.7,-E131,0.2,E149,215.5,ElectricBus,43.9,498.0
+veh_1,2.6,-E131,0.6,E149,215.2,ElectricBus,43.9,498.5
+veh_1,4.0,-E131,1.2,E149,214.6,ElectricBus,43.9,499.0
+veh_1,5.8,-E131,2.0,E149,213.8,ElectricBus,43.9,499.5

@@ -2,20 +2,22 @@
     "net-file": "config/netb.net.xml",
     "route-files": "config/routes.trip.xml",
     "additional-files": "config/additionalb.add.xml",
+    "additional-random": "config/additionalforRANDOMTRIPS.add.xml",
     "gui-settings-file": "config/viewssettings.xml",
     "trips-file": "config/trips.trips.xml",
     "statistic-output":"storing/project.statistics.xml",
     "tripinfo-output": "storing/triping.xml",
+    "stat": "config/configActivitybasedDemandGeneration/stat.xml",
     
     "random-trip" : "Tools/randomTrips.py",
 
     "vehicles": ["evehicle","ElectricBus"],
     "RESTRICTED_TYPES" : ["bus"],
-    "vehicles_number" : 10,
+    "vehicles_number" : 3,
 
     "period": "1",
     "delay": "150",
-    "step": "0.2",
+    "step": "0.5",
     "Max_time" : 500
     
 }
