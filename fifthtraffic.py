@@ -6,6 +6,7 @@ from pathlib import Path
 import csv
 import subprocess
 import sys
+import os
 
 sumoBinary = checkBinary('sumo-gui')
 
@@ -23,6 +24,7 @@ def main():
 def function_initializer():
     setup_results_and_headers()
     generate_activity_trips()
+    apply_fleet_conversion()
     startSim()
     return
 
@@ -88,7 +90,40 @@ def generate_activity_trips():
     except FileNotFoundError:
         print("Erro: O executável 'activitygen' não foi encontrado no PATH.")
 
+def apply_fleet_conversion():
+    """
+    Executa o script de conversão de frota (mista/elétrica) 
+    utilizando o caminho definido no dicionário config.
+    """
+    # 1. Recupera o caminho do dicionário config
 
+    script_path = config["convert-fleet"]
+
+    # 2. Monta o comando usando o executável do Python atual
+    # Isso garante que bibliotecas como 'random' e 'os' funcionem corretamente
+    cmd = [sys.executable, script_path]
+
+    try:
+        # Verifica se o ficheiro existe antes de tentar rodar
+        if not os.path.exists(script_path):
+            print(f"Erro: O script de conversão não foi encontrado em: {script_path}")
+            return
+
+        print(f"Executando conversão de frota: {' '.join(cmd)}")
+        
+        # Executa o script. O 'capture_output=True' permite ler o que o script imprimiu (os contadores)
+        result = subprocess.run(cmd, check=True, capture_output=True, text=True)
+        
+        # Imprime o resumo (quantos carros/ônibus foram convertidos) que o script gerou
+        print(result.stdout)
+        print("✓ Frota convertida para mista com sucesso!")
+
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao executar o script de conversão: {e}")
+        if e.stderr:
+            print(f"Detalhes do erro: {e.stderr}")
+    except Exception as e:
+        print(f"Ocorreu um erro inesperado: {e}")
 
 """Starts the simulation."""
 def startSim():
@@ -96,7 +131,7 @@ def startSim():
         [
             sumoBinary,
             '--net-file', config["net-file"],
-            '--route-files', config["route-files"],
+            '--route-files', config["route-mista"],
             '--additional-files', config["additional-files"],
             '--step-length', config["step"], 
             '--delay', config["delay"],
@@ -372,6 +407,7 @@ def maybe_parking(ID_list):
         route_edges = traci.vehicle.getRoute(veh_id)
         parkingID = random.choice(traci.parkingarea.getIDList())
         if parkingIsOnRoute(route_edges, parkingID ):
+             print("este veiculo irá estacionar:",veh_id)
              traci.vehicle.setParkingAreaStop(veh_id, parkingID, duration=120)
       
     return

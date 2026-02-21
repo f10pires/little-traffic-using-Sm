@@ -1,6 +1,7 @@
 {
     "net-file": "config/netb.net.xml",
     "route-files": "config/routes.trip.xml",
+    "route-mista": "config/configActivitybasedDemandGeneration/routes_mista.trip.xml",
     "additional-files": "config/additionalb.add.xml",
     "additional-random": "config/additionalforRANDOMTRIPS.add.xml",
     "gui-settings-file": "config/viewssettings.xml",
@@ -10,6 +11,7 @@
     "stat": "config/configActivitybasedDemandGeneration/stat.xml",
     
     "random-trip" : "Tools/randomTrips.py",
+    "convert-fleet" : "Tools/convert_fleet.py",
 
     "vehicles": ["evehicle","ElectricBus"],
     "RESTRICTED_TYPES" : ["bus"],
