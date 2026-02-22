@@ -1,0 +1,11 @@
+4° 
+tráfego aleatório
+
+- colocar veículos elétricos aleatórios para estacionar -- 
+- verificar bateria e recarregamento aleatório -- 
+- fazer baseado no soc mas de forma probabilística 
+- fazer um carro/onibus rodar bastante -
+
+- diferenciação de uma simulação de carro em uma rodovia e bairro
+- olhar sobre classes em python
+- requisitos do sumo (núcleos, ram,processador)

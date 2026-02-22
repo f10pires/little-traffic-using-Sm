@@ -152,7 +152,8 @@ def simulation():
     all_vehicles = []
     set_battery_vehicles =[]
     vehicles_that_return = {}
-    
+    key_time = random.randint(0, MAX_TIME)
+    veiculos_preComputados = []
 
     for id_provisional in range(config["vehicles_number"]): #adiciona o numero de veículos solicitados
         time = random.randint(0, MAX_TIME)
@@ -178,9 +179,11 @@ def simulation():
                 r_id = traci.vehicle.getRouteID(active_vid)
                 vehicles_that_return = register(active_vid, traci.simulation.getTime(), v_type, r_id,vehicles_that_return)
 
-        ids = traci.simulation.getLoadedIDList()
-        if ids :
-            maybe_parking(ids)
+         
+        if traci.simulation.getLoadedIDList() :
+            for veh_id in traci.simulation.getLoadedIDList() :
+                if not veh_id in veiculos_preComputados : 
+                    veiculos_preComputados.append(veh_id)
         
         traci.simulationStep()
         
@@ -210,6 +213,11 @@ def simulation():
                 
         if actual_time > MAX_TIME:
             break
+        
+        
+        if key_time == traci.simulation.getTime() :
+            maybe_parking(traci.vehicle.getIDList())
+            maybe_charge(traci.vehicle.getIDList(),veiculos_preComputados)
     traci.close()
 
 """Create a vehicle with origin and destination """
@@ -400,7 +408,7 @@ def get_color_by_battery(percentage):
         return (0, 255, 0, 255)      # Verde (Cheio)
 
 def maybe_parking(ID_list):
-    select = int(0.35*(len(ID_list)))
+    select = int(0.75*(len(ID_list)))
     ids_vehicles = random.sample(ID_list, k=select)
     
     for veh_id in ids_vehicles : 
@@ -411,5 +419,27 @@ def maybe_parking(ID_list):
              traci.vehicle.setParkingAreaStop(veh_id, parkingID, duration=120)
       
     return
+
+def maybe_charge(Veh_id_list, check_list):
+    for veh_id in Veh_id_list :
+        if veh_id in check_list :
+            #Obtém a classe de emissão do veículo
+            emission_class = traci.vehicle.getEmissionClass(veh_id) 
+            if emission_class == "Energy/default":
+
+                capacity = float(traci.vehicle.getParameter(veh_id, "device.battery.capacity"))
+                current_charge = float(traci.vehicle.getParameter(veh_id, "device.battery.chargeLevel"))
+
+                NEWcurrent_charge = set_baterychargelevel(veh_id, current_charge)
+
+
+                Level_charge = level_charge(NEWcurrent_charge,capacity)
+                cor_level = get_color_by_battery(Level_charge)
+                traci.vehicle.setColor(veh_id, cor_level)
+                if Level_charge < 20:
+                    print(f"Veículo de demanda aleatória {veh_id} irá recarregar e terminará sua rota após o recarregamento")
+                    recharge_substation(veh_id, traci.vehicle.getRouteID(veh_id))
+
+
 if __name__ == "__main__":
     main()
